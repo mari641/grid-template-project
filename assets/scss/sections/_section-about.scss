@@ -17,7 +17,7 @@
       gap: $gap * 2;
       grid-template-columns: 1fr 271px;
     }
-    @include sm {
+    @include md-sm {
       gap: $gap;
       grid-template-columns: 1fr 236px;
     }

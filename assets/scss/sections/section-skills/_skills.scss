@@ -38,7 +38,6 @@
     }
   }
   &__actions {
-    display: flex;
-    justify-content: center;
+    @extend %container-btn-primary;
   }
 }

@@ -21,3 +21,17 @@
     margin-top: 0;
   }
 }
+%container-btn-primary {
+  @include sm-min {
+    display: flex;
+    justify-content: center;
+  }
+    .btn--primary {
+      @include sm-min {
+        min-width: 350px;
+      }
+      @include sm {
+        width: 100%;
+      }
+  }
+}

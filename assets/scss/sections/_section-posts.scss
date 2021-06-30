@@ -25,9 +25,7 @@
     }
   }
   &__actions {
-    display: flex;
-    justify-content: center;
-    gap: $gap;
+    @extend %container-btn-primary;
   }
 }
 .post-item {

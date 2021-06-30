@@ -1,6 +1,4 @@
-*,
-*::before,
-*::after {
+* {
   box-sizing: border-box;
 }
 html {
@@ -94,7 +92,6 @@ input:focus {
   }
 }
 .btn--light {
-  width: 250px;
   border-color: $color-light;
   background-color: rgba($color-light, 0.1);
   @include lg-min {
@@ -105,8 +102,14 @@ input:focus {
     height: 50px;
     font-size: 1rem;
   }
-  @include md {
-    width: 170px;
+  @include md-sm {
+    min-width: 170px;
+    height: 40px;
+    letter-spacing: 0.05em;
+    font-size: 1rem;
+  }
+  @include sm {
+    min-width: 170px;
     height: 40px;
     letter-spacing: 0.05em;
     font-size: 1rem;
@@ -115,10 +118,4 @@ input:focus {
 .btn--primary {
   border-color: $color-primary;
   background-color: rgba($color-primary, 0.8);
-  @include sm-min {
-    min-width: 350px;
-  }
-  @include sm {
-    width: 100%;
-  }
 }

@@ -359,9 +359,7 @@ template {
   margin-top: 0;
 }
 
-*,
-*::before,
-*::after {
+* {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
@@ -432,7 +430,6 @@ input:focus {
 }
 
 .btn--light {
-  width: 250px;
   border-color: #ffffff;
   background-color: rgba(255, 255, 255, 0.1);
 }
@@ -605,15 +602,6 @@ input:focus {
   display: grid;
   padding-bottom: 20px;
   grid-auto-rows: calc(33.33vh - 13.333333px);
-}
-
-.skills__actions {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
 }
 
 .skill-item {
@@ -866,16 +854,6 @@ input:focus {
   gap: 20px;
 }
 
-.posts__actions {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  gap: 20px;
-}
-
 .post-item {
   -webkit-transition: background-color 0.5s;
   -o-transition: background-color 0.5s;
@@ -1035,7 +1013,15 @@ input:focus {
 }
 
 @media (min-width: 576px) {
-  .btn--primary {
+  .skills__actions, .posts__actions {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .skills__actions .btn--primary, .posts__actions .btn--primary {
     min-width: 350px;
   }
   .skills {
@@ -1164,12 +1150,6 @@ input:focus {
   h1 {
     font-size: 1.875rem;
   }
-  .btn--light {
-    width: 170px;
-    height: 40px;
-    letter-spacing: 0.05em;
-    font-size: 1rem;
-  }
   .header-menu {
     background-color: rgba(68, 89, 110, 0.25);
     -webkit-box-shadow: 3px 3px 20px -10px black;
@@ -1208,10 +1188,20 @@ input:focus {
     margin-bottom: 36px;
     font-size: 1.5rem;
   }
+  .btn--light {
+    min-width: 170px;
+    height: 40px;
+    letter-spacing: 0.05em;
+    font-size: 1rem;
+  }
   .skills__container {
     gap: 10px;
     grid-template-areas: "a1 a2" "a3 a2" "a4 a4" "a5 a6" "a5 a7"  "a8 a9";
     grid-template-columns: repeat(2, 1fr);
+  }
+  .about__container {
+    gap: 20px;
+    grid-template-columns: 1fr 236px;
   }
   .about__content p:first-of-type::after {
     right: -10px;
@@ -1235,13 +1225,19 @@ input:focus {
 }
 
 @media (max-width: 575.8px) {
+  .skills__actions .btn--primary, .posts__actions .btn--primary {
+    width: 100%;
+  }
   h2 {
     margin-bottom: 36px;
     text-align: center;
     font-size: 1.5rem;
   }
-  .btn--primary {
-    width: 100%;
+  .btn--light {
+    min-width: 170px;
+    height: 40px;
+    letter-spacing: 0.05em;
+    font-size: 1rem;
   }
   .header-content__actions {
     -webkit-box-align: center;
@@ -1259,10 +1255,6 @@ input:focus {
     gap: 20px;
     grid-template-areas: "a1" "a2" "a3" "a4" "a5"  "a6" "a7" "a8" "a9";
     grid-template-columns: 1fr;
-  }
-  .about__container {
-    gap: 20px;
-    grid-template-columns: 1fr 236px;
   }
   .about__container {
     gap: 20px;
